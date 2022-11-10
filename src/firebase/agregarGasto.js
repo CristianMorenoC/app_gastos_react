@@ -5,7 +5,7 @@ const agregarGasto = ({categoria, cantidad, descripcion, fecha, uIdUsuario}) => 
   return addDoc(collection(db, 'gastos'), {
     uIdUsuario,
     categoria,
-    cantidad,
+    cantidad: Number(cantidad),
     descripcion,
     fecha,
   })
